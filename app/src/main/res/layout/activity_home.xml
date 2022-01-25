@@ -15,17 +15,17 @@
         android:text="Que désirez-vous ?"
         android:textColor="#FF0000"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnStarter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnStarter"
         android:layout_width="125dp"
         android:layout_height="62dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="cursive"
-        android:text="Entrées "
+        android:text="@string/home_starter"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,30 +35,30 @@
         app:layout_constraintVertical_bias="0.569" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnMainDish"
         android:layout_width="129dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="cursive"
-        android:text="Plats"
+        android:text="@string/home_starter"
         android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/btnDessert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.365"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/btnStarter"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnDessert"
         android:layout_width="129dp"
         android:layout_height="69dp"
         android:layout_marginBottom="104dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="cursive"
-        android:text="Déserts"
+        android:text="Désserts"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,49 +66,49 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView11"
+        android:id="@+id/imgageLogo"
         android:layout_width="304dp"
         android:layout_height="344dp"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnStarter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/test" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/imageStarter"
         android:layout_width="100dp"
         android:layout_height="71dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintStart_toEndOf="@+id/btnStarter"
+        app:layout_constraintTop_toBottomOf="@+id/imgageLogo"
         app:srcCompat="@drawable/entr_e" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/imageMainDish"
         android:layout_width="100dp"
         android:layout_height="55dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintStart_toEndOf="@+id/btnMainDish"
+        app:layout_constraintTop_toBottomOf="@+id/imageStarter"
         app:srcCompat="@drawable/plat" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/imageDessert"
         android:layout_width="119dp"
         android:layout_height="59dp"
         android:layout_marginTop="27dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintStart_toEndOf="@+id/btnDessert"
+        app:layout_constraintTop_toBottomOf="@+id/imageMainDish"
         app:srcCompat="@drawable/desert" />
 
 

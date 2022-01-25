@@ -1,34 +1,50 @@
 package fr.isen.rouveure.androiderestaurant
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import fr.isen.rouveure.androiderestaurant.databinding.ActivityHomeBinding
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 
 
 class HomeActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityHomeBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        var button2 = findViewById(R.id.button2) as Button
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
-        button2.setOnClickListener {
-            // toast on button click event
-            Toast.makeText(this, "Vous avez choisie les entrées.", Toast.LENGTH_LONG).show()
-        }
-        var button3 = findViewById(R.id.button3) as Button
-
-        button3.setOnClickListener {
-            // toast on button click event
-            Toast.makeText(this, "Vous avez choisie les plats.", Toast.LENGTH_LONG).show()
+        // toast on button click event
+        // Toast.makeText(this, "Vous avez choisie les entrées.", Toast.LENGTH_LONG).show()
+        binding.btnStarter.setOnClickListener {
+            changeActivity(getString(R.string.home_starter))
         }
 
-        var button4 = findViewById(R.id.button4) as Button
-
-        button4.setOnClickListener {
-            // toast in button click event
-            Toast.makeText(this, "Vous avez choisie les deserts.", Toast.LENGTH_LONG).show()
+        // toast on button click event
+        // Toast.makeText(this, "Vous avez choisie les plats.", Toast.LENGTH_LONG).show()
+        binding.btnMainDish.setOnClickListener {
+            changeActivity(getString(R.string.home_dish))
         }
+
+        // toast in button click event
+        // Toast.makeText(this, "Vous avez choisie les deserts.", Toast.LENGTH_LONG).show()
+        binding.btnDessert.setOnClickListener {
+            changeActivity(getString(R.string.home_dessert))
+        }
+
     }
+
+    private fun changeActivity(category: String) {
+        val intent = Intent( this, CategoriesActivity::class.java)
+        intent.putExtra("category_type", category)
+        startActivity(intent)
+    }
+
 }
