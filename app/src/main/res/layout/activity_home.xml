@@ -6,110 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="cursive"
-        android:text="Que désirez-vous ?"
-        android:textColor="#FF0000"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnStarter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnStarter"
-        android:layout_width="125dp"
-        android:layout_height="62dp"
-        android:backgroundTint="#FFFFFF"
-        android:fontFamily="cursive"
-        android:text="@string/home_starter"
-        android:textColor="#000000"
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="330dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.569" />
+        app:layout_constraintVertical_bias="0.100000024" />
 
-    <Button
-        android:id="@+id/btnMainDish"
-        android:layout_width="129dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#FFFFFF"
-        android:fontFamily="cursive"
-        android:text="@string/home_starter"
-        android:textColor="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/btnDessert"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStarter"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnDessert"
-        android:layout_width="129dp"
-        android:layout_height="69dp"
-        android:layout_marginBottom="104dp"
-        android:backgroundTint="#FFFFFF"
-        android:fontFamily="cursive"
-        android:text="Désserts"
-        android:textColor="#000000"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="88dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <ImageView
+        android:id="@+id/imgdessert"
+        android:layout_width="209dp"
+        android:layout_height="341dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/dessert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/imgdish"
+        android:layout_width="212dp"
+        android:layout_height="347dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/maindish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/imgStarter"
+        android:layout_width="212dp"
+        android:layout_height="345dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/starter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/starter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/home_starter"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgStarter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imgageLogo"
-        android:layout_width="304dp"
-        android:layout_height="344dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnStarter"
+    <TextView
+        android:id="@+id/dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/home_dish"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgdish"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.74"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/dessert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/home_dessert"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/test" />
-
-    <ImageView
-        android:id="@+id/imageStarter"
-        android:layout_width="100dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnStarter"
-        app:layout_constraintTop_toBottomOf="@+id/imgageLogo"
-        app:srcCompat="@drawable/entr_e" />
-
-    <ImageView
-        android:id="@+id/imageMainDish"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnMainDish"
-        app:layout_constraintTop_toBottomOf="@+id/imageStarter"
-        app:srcCompat="@drawable/plat" />
-
-    <ImageView
-        android:id="@+id/imageDessert"
-        android:layout_width="119dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="27dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btnDessert"
-        app:layout_constraintTop_toBottomOf="@+id/imageMainDish"
-        app:srcCompat="@drawable/desert" />
-
+        app:layout_constraintTop_toTopOf="@+id/imgdessert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

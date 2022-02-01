@@ -23,19 +23,19 @@ class HomeActivity : AppCompatActivity() {
 
         // toast on button click event
         // Toast.makeText(this, "Vous avez choisie les entrées.", Toast.LENGTH_LONG).show()
-        binding.btnStarter.setOnClickListener {
+        binding.imgStarter.setOnClickListener {
             changeActivity(getString(R.string.home_starter))
         }
 
         // toast on button click event
         // Toast.makeText(this, "Vous avez choisie les plats.", Toast.LENGTH_LONG).show()
-        binding.btnMainDish.setOnClickListener {
+        binding.imgdish.setOnClickListener {
             changeActivity(getString(R.string.home_dish))
         }
 
         // toast in button click event
         // Toast.makeText(this, "Vous avez choisie les deserts.", Toast.LENGTH_LONG).show()
-        binding.btnDessert.setOnClickListener {
+        binding.imgdessert.setOnClickListener {
             changeActivity(getString(R.string.home_dessert))
         }
 

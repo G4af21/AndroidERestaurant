@@ -6,8 +6,18 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
+import fr.isen.rouveure.androiderestaurant.model.DishModel
 
-class DishAdapter(private val mList: List<ItemsViewModel>/*, val onDishClicked: (Dish) -> Unit*/) : RecyclerView.Adapter<DishAdapter.ViewHolder>() {
+
+class DishAdapter(private val mList: List<DishModel>, val onDishClicked: (DishModel) -> Unit) : RecyclerView.Adapter<DishAdapter.ViewHolder>() {
+
+    // Holds the views for adding it to image and text
+    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
+        val dishName: TextView = itemView.findViewById(R.id.cellDishName)
+        val dishPicture:  ImageView = itemView.findViewById(R.id.cellImageDish)
+        val dishPrice: TextView = itemView.findViewById(R.id.cellDishPrice)
+    }
 
     // create new views
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,29 +32,27 @@ class DishAdapter(private val mList: List<ItemsViewModel>/*, val onDishClicked: 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        val ItemsViewModel = mList[position]
+        val dishModel = mList[position]
 
-        // sets the image to the imageview from our itemHolder class
-        holder.imageView.setImageResource(ItemsViewModel.image)
+        holder.dishName.text = dishModel.name_fr
 
-        // sets the text to the textview from our itemHolder class
-        holder.textView.text = ItemsViewModel.text
+        Picasso.get()
+            .load(mList[position].getFirstPicture())
+            .error(R.drawable.logo)
+            .placeholder(R.drawable.logo)
+            .into(holder.dishPicture)
+        
+        holder.dishPrice.text = dishModel.getFormattedPrice()
 
-       /* holder.itemView.setOnClickListener {
-            onDishClicked(dishes[position])
-        }*/
+        holder.itemView.setOnClickListener {
+            onDishClicked(dishModel)
+        }
 
     }
 
-    // return the number of the items in the list
+    // return the number of the items in the list)
     override fun getItemCount(): Int {
         return mList.size
-    }
-
-    // Holds the views for adding it to image and text
-    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val imageView: ImageView = itemView.findViewById(R.id.imageMainDish)
-        val textView: TextView = itemView.findViewById(R.id.cellMainDish)
     }
 
 }
