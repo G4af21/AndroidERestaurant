@@ -8,24 +8,22 @@
     tools:context=".CategoriesActivity">
 
     <ImageView
-        android:id="@+id/BackgroudnTitle"
-        android:layout_width="437dp"
-        android:layout_height="254dp"
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/degradorange" />
+        app:srcCompat="@drawable/backgroundcategories" />
 
     <TextView
         android:id="@+id/mainDishTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:fontFamily="sans-serif-medium"
-        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/black"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
@@ -36,11 +34,13 @@
         android:id="@+id/categoriesRecycleView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BackgroudnTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainDishTitle"
+        app:layout_constraintVertical_bias="1.0"
         tools:itemCount="5"
         tools:listitem="@layout/card_view_design" />
 

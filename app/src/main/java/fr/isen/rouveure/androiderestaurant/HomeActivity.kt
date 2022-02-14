@@ -1,15 +1,14 @@
 package fr.isen.rouveure.androiderestaurant
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.view.Menu
 import fr.isen.rouveure.androiderestaurant.databinding.ActivityHomeBinding
 import android.widget.Toast
-import androidx.recyclerview.widget.RecyclerView
 
 
-class HomeActivity : AppCompatActivity() {
+
+class HomeActivity : BaseActivity() {
 
     private lateinit var binding: ActivityHomeBinding
 

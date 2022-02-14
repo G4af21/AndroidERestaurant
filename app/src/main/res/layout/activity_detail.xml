@@ -22,7 +22,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="cursive"
-        android:text="TextView"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
@@ -33,23 +32,22 @@
         android:id="@+id/dishIngredient"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
+        android:layout_margin="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="sans-serif-black"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
 
     <Button
-        android:id="@+id/buy"
+        android:id="@+id/btnBucketPrice"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:text="PAYER"
+        android:text="@string/total"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -84,23 +82,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="0"
+        android:text="1"
         app:layout_constraintEnd_toStartOf="@+id/addDish"
         app:layout_constraintStart_toEndOf="@+id/deletDish"
         app:layout_constraintTop_toBottomOf="@+id/dishIngredient" />
 
-    <TextView
-        android:id="@+id/bucketPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="274dp"
-        android:text="TextView"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="179dp"
+        android:layout_height="234dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btnBucketPrice"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/deletDish" />
+        app:layout_constraintTop_toBottomOf="@+id/deletDish"
+        app:srcCompat="@drawable/order" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

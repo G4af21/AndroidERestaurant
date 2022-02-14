@@ -15,7 +15,7 @@ import fr.isen.rouveure.androiderestaurant.model.DishResult
 import org.json.JSONObject
 
 
-class CategoriesActivity : AppCompatActivity() {
+class CategoriesActivity : BaseActivity() {
 
     private lateinit var binding: ActivityCategoriesBinding
 

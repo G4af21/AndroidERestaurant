@@ -14,9 +14,9 @@ class DishAdapter(private val mList: List<DishModel>, val onDishClicked: (DishMo
 
     // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-        val dishName: TextView = itemView.findViewById(R.id.cellDishName)
-        val dishPicture:  ImageView = itemView.findViewById(R.id.cellImageDish)
-        val dishPrice: TextView = itemView.findViewById(R.id.cellDishPrice)
+        val dishName: TextView = itemView.findViewById(R.id.cellBasketName)
+        val dishPicture:  ImageView = itemView.findViewById(R.id.cellImageBasket)
+        val dishPrice: TextView = itemView.findViewById(R.id.cellBasketPrice)
     }
 
     // create new views
@@ -38,8 +38,8 @@ class DishAdapter(private val mList: List<DishModel>, val onDishClicked: (DishMo
 
         Picasso.get()
             .load(mList[position].getFirstPicture())
-            .error(R.drawable.logo)
-            .placeholder(R.drawable.logo)
+            .error(R.drawable.noimages)
+            .placeholder(R.drawable.noimages)
             .into(holder.dishPicture)
         
         holder.dishPrice.text = dishModel.getFormattedPrice()

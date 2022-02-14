@@ -1,8 +1,27 @@
 <resources>
-    <string name="app_name">AndroidERestaurant</string>
+    <string name="app_name">MRvrRestaurant</string>
     <string name="home_starter">Entrées</string>
     <string name="home_dish">Plats</string>
     <string name="home_dessert">Desserts</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="total">Total</string>
+    <string name="itemAdded">Votre plats a été ajouté au panier</string>
+    <string name="basket">Panier</string>
+    <string name="quantity">Quantité : </string>
+    <string name="lastName">Nom</string>
+    <string name="firstName">Prénom</string>
+    <string name="adress">Adresse</string>
+    <string name="email">e-mail</string>
+    <string name="password">Mot de passe</string>
+    <string name="invalidFours">Veuillez saisir tous les champs</string>
 </resources>

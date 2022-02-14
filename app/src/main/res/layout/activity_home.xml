@@ -7,6 +7,15 @@
     tools:context=".HomeActivity">
 
     <ImageView
+        android:id="@+id/backgroundHome"
+        android:layout_width="406dp"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backgroundhome" />
+
+    <ImageView
         android:id="@+id/title"
         android:layout_width="330dp"
         android:layout_height="94dp"
@@ -46,7 +55,7 @@
         android:layout_width="212dp"
         android:layout_height="347dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="10dp"
         android:src="@drawable/maindish"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -55,7 +64,7 @@
         android:id="@+id/imgStarter"
         android:layout_width="212dp"
         android:layout_height="345dp"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/starter"
         app:layout_constraintStart_toStartOf="parent"
